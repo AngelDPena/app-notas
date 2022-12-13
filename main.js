@@ -1,3 +1,5 @@
+const config = require("./package.json");
+
 const express = require("express");
 const body_parser = require("body-parser");
 const path = require("path");
@@ -87,6 +89,6 @@ app.post("/updatepage", (req, res, next) => {
   return next();
 });
 
-app.listen((arg) => {
+app.listen(config.Port, () => {
   console.log("Server started.");
 });
